@@ -1,0 +1,8 @@
+<agm-map [latitude]="-2.008780" [longitude]="29.920193" [mapTypeId]="'satellite'" [maxZoom]="150000" [zoom]="1500000">
+  <agm-marker *ngFor="let point of points" [latitude]="point.coordinates[0]" [longitude]="point.coordinates[1]"
+    [iconUrl]='point.icon'>
+    <agm-info-window> {{ point.description}} <br>
+      <a class="mt-2" routerLink="/details">More Information</a>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
